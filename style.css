@@ -1,0 +1,85 @@
+.main{
+    padding: 0 8%;
+}
+.info{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+h1::before {
+    content: " ";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: hsl(200 100% 80%);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+h1 {
+    position: relative;
+}
+h2::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+h2:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+h2::before {
+    content: " ";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: hsl(200 100% 80%);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+h2 {
+    position: relative;
+}
+.text{
+    width: 50%;
+}
+.main-info{
+    font-size: large;
+}
+.addition-info{
+    display: flex;
+}
+.sport{
+    width: 33%;
+}
+.websites{
+    width: 33%;
+}
+.my_img{
+    border-radius: 5%;
+}
+.my_img:hover{
+    box-shadow: 0px 0px 5px;
+}
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;    
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) } 
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) } 
+    100% { transform: rotate( 0.0deg) }
+  }
